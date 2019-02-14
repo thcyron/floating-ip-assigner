@@ -1,0 +1,4 @@
+github.com/hetznercloud/hcloud-go v1.12.0 h1:ugZO8a8ADekqSWi7xWlcs6pxr4QE0tw5VnyjXcL5n28=
+github.com/hetznercloud/hcloud-go v1.12.0/go.mod h1:g5pff0YNAZywQaivY/CmhUYFVp7oP0nu3MiODC2W4Hw=
+github.com/pkg/errors v0.8.1 h1:iURUrRGxPUNPdy5/HRSm+Yj6okJ6UtLINN0Q9M4+h3I=
+github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
