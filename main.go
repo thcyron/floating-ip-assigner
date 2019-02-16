@@ -35,10 +35,15 @@ func main() {
 	)
 
 	ctx, cancel := context.WithTimeout(context.Background(), timeout)
+
 	floatingIP, _, err := client.FloatingIP.GetByID(ctx, floatingIPID)
 	if err != nil {
 		log.Fatalln(errors.Wrap(err, "failed to get Floating IP from API"))
 	}
+	if floatingIP == nil {
+		log.Fatalf("Floating IP %d not found\n", floatingIPID)
+	}
+
 	serverID, err := getInstanceID(ctx)
 	if err != nil {
 		log.Fatalln(errors.Wrap(err, "failed to get instance ID from metadata service"))
@@ -47,6 +52,10 @@ func main() {
 	if err != nil {
 		log.Fatalln(errors.Wrap(err, "failed to get server from API"))
 	}
+	if server == nil {
+		log.Fatalf("server %d not found (check if token is for the correct project)\n", serverID)
+	}
+
 	cancel()
 
 	for {
