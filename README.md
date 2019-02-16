@@ -11,7 +11,7 @@ Just add the container to your pod spec:
 spec:
   containers:
   - name: floating-ip-assigner
-    image: thcyron/floating-ip-assigner:1.0.0
+    image: thcyron/floating-ip-assigner:1.0.1
     env:
     - name: HCLOUD_TOKEN
       value: "<token>"
